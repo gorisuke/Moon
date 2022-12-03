@@ -1,5 +1,5 @@
 
-# Scpipts Repository🌙
+# Moon(Scpipts Assets) Repository🌙
 
 
 Scala repository of useful scripts for personal use
