@@ -1,0 +1,16 @@
+{
+  "name": "scala-cli",
+  "argv": [
+    "/usr/local/bin/scala-cli",
+    "bsp",
+    "--json-options",
+    "/home/ubuntu/scala/scripts/.scala-build/ide-options-v2.json",
+    "/home/ubuntu/scala/scripts/sample.scala"
+  ],
+  "version": "0.1.18",
+  "bspVersion": "2.1.0-M3",
+  "languages": [
+    "scala",
+    "java"
+  ]
+}

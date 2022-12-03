@@ -1,0 +1,1 @@
+@main def f(args: String *) = println(args.mkString)
