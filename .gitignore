@@ -1,3 +1,6 @@
 /.bsp/*
 /.scala-build/*
 /.metals/*
+
+/src/main/scala/.bsp/*
+/src/main/scala/.scala-build/*

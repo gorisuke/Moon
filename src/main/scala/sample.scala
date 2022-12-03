@@ -1,4 +1,4 @@
-@main def entryPoint(args: String*): Unit = process(args.mkString)
+@main def sample(args: String*): Unit = process(args.mkString)
 val support_os_list: List[String | (String | Nothing)] =
   ("Linux", "macOS").toList
 
