@@ -1,26 +1,33 @@
+import scala.sys.process._
 @main def sample(args: String*): Unit = process(args.mkString)
-val support_os_list: List[String | (String | Nothing)] =
+val supportOsList: List[String | (String | Nothing)] =
   ("Linux", "macOS").toList
 
 def process(args: String*): Unit = {
-  if(isSupportedEnv()){
+  if (isSupportedEnv()) {
     println("Supported!!!!")
+    val outPuts = excuteCommand("which fish")
+    println(outPuts)
   }
 }
 
 def isSupportedEnv(): Boolean = {
 
   // Initialize Flg
-  var is_supported = false
+  var isSupported = false
   // Check OS Name
-  val env_os = getOperatingSystem()
+  val envOs = getOperatingSystem()
 
-  if (support_os_list.contains(env_os)) {
-    is_supported = true
+  if (supportOsList.contains(envOs)) {
+    isSupported = true
   }
-  is_supported
+  isSupported
 }
 
+def excuteCommand(cmd: String): String = {
+  val output = cmd.!! // Captures the output
+  output
+}
 def getOperatingSystem(): String = {
   val os: String = System.getProperty("os.name")
   os
