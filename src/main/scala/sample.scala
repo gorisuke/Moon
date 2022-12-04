@@ -1,9 +1,18 @@
 import scala.sys.process._
-@main def sample(args: String*): Unit = process(args.mkString)
+@main def sample(args: String*): Unit = process(args)
 val supportOsList: List[String | (String | Nothing)] =
   ("Linux", "macOS").toList
 
-def process(args: String*): Unit = {
+def process(args: Seq[String]): Unit = {
+  val argsLength = args.size
+
+  if (argsLength > 0) {
+    println(raw"${argsLength} arg set")
+  } else {
+    println("Not Set Args")
+  }
+
+  args.map(arg => println(arg))
   if (isSupportedEnv()) {
     println("Supported!!!!")
     val outPuts = excuteCommand("which fish")
